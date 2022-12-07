@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Alex Rodriguez Valdes">
+        <meta name="description" content="Ejercicio 9 de la Práctica de Comp. en el cliente">
+        <meta name="keywords" content="JQuery, JavaScript, Ejercicio, Práctica">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Ejercicio 9 </title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="Ejercicio9.js"> </script>
+        <link rel="stylesheet" type="text/css" href="Ejercicio9.css">
+    </head>
+
+    <body>
+        <header>
+            <h1> Consumo Servicios Web XML </h1>
+        </header>
+    
+        <article>
+            <h2> Datos meteorológicos </h2>
+            
+            <section>
+                <h3> Elige una ciudad </h3>
+
+                <input type="button" value="Gijon" onclick="meteo.cargarDatos(1)">
+                <input type="button" value="Oviedo" onclick="meteo.cargarDatos(2)">
+                <input type="button" value="Madrid" onclick="meteo.cargarDatos(3)">
+                <input type="button" value="Barcelona" onclick="meteo.cargarDatos(4)">
+                <input type="button" value="Salamanca" onclick="meteo.cargarDatos(5)">
+            </section><section> <h3> DATOS </h3><p> Número de elementos del XML: 19 </p><p> Ciudad: Oviedo </p><p> País: ES </p><p> Latitud: 43.3603 grados </p><p> Longitud: -5.8448 grados </p><p> Temperatura: 10.22 grados Celsius </p><p> Temperatura máxima: 12.27 grados Celsius </p><p> Temperatura mínima: 8.49 grados Celsius </p><p> Temperatura (unidades): celsius </p><p> Presión: 1014 hPa </p><p> Humedad: 95 % </p><p> Amanece a las: 8:42:11 </p><p> Oscurece a las: 17:47:42 </p><p> Dirección del viento: 198  grados </p><p> Nombre de la dirección del viento: South-southwest </p><p> Velocidad del viento: 0.45 metros/segundo </p><p> Nombre del viento: Calm </p><p> Codigo del viento: SSW </p><p> Hora de la medida: 2:42:32 </p><p> Fecha de la medida: 7/12/2022 </p><p> Descripción: muy nuboso </p><p> Visibilidad: 10000 metros </p><p> Nubosidad: 73 </p><p> Nombre de la nubosidad: broken clouds </p><p> Precipitación valor: undefined </p><p> Precipitación modo: no </p><picture> <img src="https://openweathermap.org/img/w/04n.png" alt="Icono"> </picture></section>
+
+        </article>
+
+        <footer> Alex Rodriguez Valdes - Software y Estándares para la Web 2022/2023 </footer>
+    
+</body></html>

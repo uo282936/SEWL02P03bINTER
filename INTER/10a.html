@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Alex Rodriguez Valdes">
+        <meta name="description" content="Ejercicio 10 de la Práctica de Comp. en el cliente">
+        <meta name="keywords" content="JQuery, JavaScript, Ejercicio, Práctica">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Ejercicio 10 </title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="Ejercicio10.js"> </script>
+        <link rel="stylesheet" type="text/css" href="Ejercicio10.css">
+    </head>
+
+    <body>
+        <header>
+            <h1> Consumo Servicios Web Cotizaciones </h1>
+        </header>
+    
+        <article>
+            <h2> Datos de la electricidad en España </h2>
+
+            <p> Introduzca un día de referencia, y se mostrará el precio de la electricidad (€/MWh) de dicho día, hora a hora. </p>
+            <p> IMPORTANTE: La fecha de referencia debe estar entre el 01/01/2014 y el 30/11/2022, ambos incluídos. </p>
+
+            <section>
+                <h3> RECOGIDA DE DATOS </h3>
+                <form>
+                    <p>
+                        <label for="fecha"> Fecha </label>
+                        <input id="fecha" type="date">
+                    </p>
+                    <input type="button" value="Obtener precios" onclick="consulter.getPrecios()">
+                </form>
+            </section><section> <h3> ERROR </h3><p> La fecha introducida no es válida </p></section>
+
+        </article>
+
+        <footer> Alex Rodriguez Valdes - Software y Estándares para la Web 2022/2023 </footer>
+    
+</body></html>

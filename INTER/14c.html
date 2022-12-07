@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Alex Rodriguez Valdes">
+        <meta name="description" content="Ejercicio 14 de la Práctica de Comp. en el cliente">
+        <meta name="keywords" content="JQuery, JavaScript, Ejercicio, Práctica">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Ejercicio 14 </title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="Ejercicio14.css">
+    </head>
+
+    <body>
+        <header>
+            <h1> Aplicación: Carga, creación y guardado de imágenes </h1>
+        </header><p> Este navegador soporta el API File </p>
+
+        <script src="Ejercicio14.js"></script>
+
+        <main>
+            <h2> Archivo de entrada </h2>
+            <p> El archivo de entrada debe ser un txt de texto plano con 3 posibles tipos de figuras, especificadas con un formato tal que: </p>
+
+            <ul>
+                <li> rectangulo-[x]/[y]/[ancho]/[alto]-[color] </li>
+                <li> triangulo-[x1],[y1]/[x2],[y2]/[x3],[y3]-[color] </li>
+                <li> circulo-[x]/[y]/[radio]-[color] </li>
+            </ul>
+
+            <p> El color puede ser "rojo", "amarillo", "verde", "azul" o "random" (genera un color aleatorio). El resto de parámetros son números relativos a coordenadas y tamaños </p>
+
+            <article> 
+                <h3> Carga de archivo </h3>
+
+                <p>ESTADO: Archivo cargado correctamente</p>
+                <label for="archivo"> Archivo: </label>
+                <input id="archivo" type="file" onchange="exec.cargarTXT(this.files)"> 
+            </article><canvas></canvas>
+
+            
+
+            <article>
+                <h3> Guardado de imagen generada </h3>
+
+                <p> Si deseas guardar la imagen, puedes hacerlo con click derecho sobre esta y seleccionando la opción oportuna. 
+                    En otros dispositivos, la pulsación se hará manteniendo presionada la imagen. </p>
+                <p> Si quieres copiar el contenido del archivo del dibujo (el txt plano) al portapapeles, pulse en el siguiente botón. 
+                    Se copiará el contenido del último txt plano cargado. </p>
+
+                <input type="button" value="Copiar a portapapeles" onclick="exec.copy()">
+
+                <p>
+                    <label for="prueba"> Puedes probar que se haya copiado correctamente pegándolo a continuación: </label>
+                </p>
+                <textarea id="prueba" cols="60" rows="10"></textarea>
+            </article>
+
+        </main>
+        
+        <footer> Alex Rodriguez Valdes - Software y Estándares para la Web 2022/2023 </footer>
+    
+</body></html>

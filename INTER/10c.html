@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Alex Rodriguez Valdes">
+        <meta name="description" content="Ejercicio 10 de la Práctica de Comp. en el cliente">
+        <meta name="keywords" content="JQuery, JavaScript, Ejercicio, Práctica">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Ejercicio 10 </title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="Ejercicio10.js"> </script>
+        <link rel="stylesheet" type="text/css" href="Ejercicio10.css">
+    </head>
+
+    <body>
+        <header>
+            <h1> Consumo Servicios Web Cotizaciones </h1>
+        </header>
+    
+        <article>
+            <h2> Datos de la electricidad en España </h2>
+
+            <p> Introduzca un día de referencia, y se mostrará el precio de la electricidad (€/MWh) de dicho día, hora a hora. </p>
+            <p> IMPORTANTE: La fecha de referencia debe estar entre el 01/01/2014 y el 30/11/2022, ambos incluídos. </p>
+
+            <section>
+                <h3> RECOGIDA DE DATOS </h3>
+                <form>
+                    <p>
+                        <label for="fecha"> Fecha </label>
+                        <input id="fecha" type="date">
+                    </p>
+                    <input type="button" value="Obtener precios" onclick="consulter.getPrecios()">
+                </form>
+            </section><section> <h3> Precios mercado peninsular en tiempo real </h3><p> Tipo tarifa: PVPC (€/MWh) </p><ul> <li> 2022-11-16 (00:00h)  ---  131.66 €/MWh </li><li> 2022-11-16 (01:00h)  ---  129.61 €/MWh </li><li> 2022-11-16 (02:00h)  ---  127.23 €/MWh </li><li> 2022-11-16 (03:00h)  ---  128.41 €/MWh </li><li> 2022-11-16 (04:00h)  ---  131.03 €/MWh </li><li> 2022-11-16 (05:00h)  ---  128.93 €/MWh </li><li> 2022-11-16 (06:00h)  ---  129.49 €/MWh </li><li> 2022-11-16 (07:00h)  ---  154.24 €/MWh </li><li> 2022-11-16 (08:00h)  ---  187.47 €/MWh </li><li> 2022-11-16 (09:00h)  ---  188.36 €/MWh </li><li> 2022-11-16 (10:00h)  ---  218.87 €/MWh </li><li> 2022-11-16 (11:00h)  ---  220.74 €/MWh </li><li> 2022-11-16 (12:00h)  ---  208.76 €/MWh </li><li> 2022-11-16 (13:00h)  ---  203.85 €/MWh </li><li> 2022-11-16 (14:00h)  ---  157.67 €/MWh </li><li> 2022-11-16 (15:00h)  ---  163.20 €/MWh </li><li> 2022-11-16 (16:00h)  ---  174.56 €/MWh </li><li> 2022-11-16 (17:00h)  ---  170.36 €/MWh </li><li> 2022-11-16 (18:00h)  ---  228.71 €/MWh </li><li> 2022-11-16 (19:00h)  ---  231.30 €/MWh </li><li> 2022-11-16 (20:00h)  ---  233.91 €/MWh </li><li> 2022-11-16 (21:00h)  ---  234.89 €/MWh </li><li> 2022-11-16 (22:00h)  ---  177.96 €/MWh </li><li> 2022-11-16 (23:00h)  ---  150.87 €/MWh </li></ul><p> Precio medio del día: 175.50333333333333€/MWh </p></section>
+
+        </article>
+
+        <footer> Alex Rodriguez Valdes - Software y Estándares para la Web 2022/2023 </footer>
+    
+</body></html>

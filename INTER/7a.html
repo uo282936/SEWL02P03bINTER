@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Alex Rodriguez Valdes">
+        <meta name="description" content="Ejercicio 7 de la Práctica de Comp. en el cliente">
+        <meta name="keywords" content="JQuery, JavaScript, Ejercicio, Práctica">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Ejercicio 7 </title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="Ejercicio7.js"> </script>
+        <link rel="stylesheet" type="text/css" href="Ejercicio7.css">
+    </head>
+
+    <body>
+        <header>
+            <h1> Gastos de la empresa </h1>
+        </header>
+    
+        <form>
+            <input type="button" value="Ocultar" onclick="editor.ocultar()">
+            <input type="button" value="Mostrar" onclick="editor.mostrar()">
+            <input type="button" value="Modificar: Ampliar" onclick="editor.modificacionAmpliar()">
+            <input type="button" value="Modificar: Reducir" onclick="editor.modificacionReducir()">
+            <input type="button" value="Añadir" onclick="editor.añadirElemento()">
+            <input type="button" value="Borrar" onclick="editor.borrarElemento()">
+            <input type="button" value="Recorrer" onclick="editor.recorrido()">
+            <input type="button" value="Deshacer recorrido" onclick="editor.deshacerRecorrido()">
+            <input type="button" value="Sumar" onclick="editor.sumasTabla()">
+            <input type="button" value="Deshacer suma" onclick="editor.deshacerSuma()">
+        </form>
+
+        <article>
+            <h2> Desglose de gastos </h2>
+            <p style="display: none;"> A continuación se muestra un desglose de gastos por conceptos por parte de la empresa </p>
+
+            <section>
+                <h3>Tabla de gastos completa</h3>
+                <p> Los distintos conceptos considerados son: Maquina1, Maquina2, Maquina3, Luz, Agua, Gas, Trabajadores e Impuestos </p>
+
+                <table>
+                    <tbody><tr>
+                        <th scope="col" id="conceptos">Conceptos</th>
+                        <th scope="col" id="enero">Enero</th>
+                        <th scope="col" id="febrero">Febrero</th>
+                        <th scope="col" id="marzo">Marzo</th>
+                        <th scope="col" id="abril">Abril</th>
+                        <th scope="col" id="mayo">Mayo</th>
+                        <th scope="col" id="junio">Junio</th>
+                        <th scope="col" id="totalf">Total</th>
+                    </tr>
+                    <tr>
+                        <th scope="row" id="maquina1" headers="conceptos">Maquina1</th>
+                        <td headers="maquina1 enero">2000</td>
+                        <td headers="maquina1 febrero">1800</td>
+                        <td headers="maquina1 marzo">2150</td>
+                        <td headers="maquina1 abril">2100</td>
+                        <td headers="maquina1 mayo">2400</td>
+                        <td headers="maquina1 junio">2300</td>
+                        <td headers="maquina1 totalf">12750</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" id="maquina2" headers="conceptos">Maquina2</th>
+                        <td headers="maquina2 enero">1000</td>
+                        <td headers="maquina2 febrero">1300</td>
+                        <td headers="maquina2 marzo">1250</td>
+                        <td headers="maquina2 abril">1300</td>
+                        <td headers="maquina2 mayo">1300</td>
+                        <td headers="maquina2 junio">1350</td>
+                        <td headers="maquina2 totalf">7500</td>
+                    </tr>	
+                    <tr>
+                        <th scope="row" id="maquina3" headers="conceptos">Maquina3</th>
+                        <td headers="maquina3 enero">1500</td>
+                        <td headers="maquina3 febrero">1700</td>
+                        <td headers="maquina3 marzo">1650</td>
+                        <td headers="maquina3 abril">1650</td>
+                        <td headers="maquina3 mayo">1550</td>
+                        <td headers="maquina3 junio">1600</td>
+                        <td headers="maquina3 totalf">9650</td>
+                    </tr>	
+                    <tr>
+                        <th scope="row" id="luz" headers="conceptos">Luz</th>
+                        <td headers="luz enero">4000</td>
+                        <td headers="luz febrero">4800</td>
+                        <td headers="luz marzo">4200</td>
+                        <td headers="luz abril">4100</td>
+                        <td headers="luz mayo">4400</td>
+                        <td headers="luz junio">4500</td>
+                        <td headers="luz totalf">26000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" id="agua" headers="conceptos">Agua</th>
+                        <td headers="agua enero">1300</td>
+                        <td headers="agua febrero">1200</td>
+                        <td headers="agua marzo">1100</td>
+                        <td headers="agua abril">1400</td>
+                        <td headers="agua mayo">1300</td>
+                        <td headers="agua junio">1450</td>
+                        <td headers="agua totalf">7750</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" id="gas" headers="conceptos">Gas</th>
+                        <td headers="gas enero">2100</td>
+                        <td headers="gas febrero">2200</td>
+                        <td headers="gas marzo">2150</td>
+                        <td headers="gas abril">2400</td>
+                        <td headers="gas mayo">2350</td>
+                        <td headers="gas junio">2300</td>
+                        <td headers="gas totalf">13500</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" id="trabajadores" headers="conceptos">Trabajadores</th>
+                        <td headers="trabajadores enero">6000</td>
+                        <td headers="trabajadores febrero">6600</td>
+                        <td headers="trabajadores marzo">6900</td>
+                        <td headers="trabajadores abril">5800</td>
+                        <td headers="trabajadores mayo">5700</td>
+                        <td headers="trabajadores junio">5500</td>
+                        <td headers="trabajadores totalf">36500</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" id="impuestos" headers="conceptos">Impuestos</th>
+                        <td headers="impuestos enero">5000</td>
+                        <td headers="impuestos febrero">5200</td>
+                        <td headers="impuestos marzo">5100</td>
+                        <td headers="impuestos abril">5900</td>
+                        <td headers="impuestos mayo">6200</td>
+                        <td headers="impuestos junio">6200</td>
+                        <td headers="impuestos totalf">33600</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" id="totalc" headers="conceptos">Total</th>
+                        <td headers="totalc enero">22900</td>
+                        <td headers="totalc febrero">24800</td>
+                        <td headers="totalc marzo">24500</td>
+                        <td headers="totalc abril">24650</td>
+                        <td headers="totalc mayo">25200</td>
+                        <td headers="totalc junio">25200</td>
+                        <td headers="totalc totalf">147250</td>
+                    </tr>
+                </tbody></table>
+
+                <h3> Próximas máquinas </h3>
+                <ul> <li> Maquina 1 </li><li> Maquina 2 </li><li> Maquina 3 </li></ul><p>1 Etiqueta padre : BODY - Elemento : HEADER</p><p>2 Etiqueta padre : HEADER - Elemento : H1</p><p>3 Etiqueta padre : BODY - Elemento : FORM</p><p>4 Etiqueta padre : FORM - Elemento : INPUT</p><p>5 Etiqueta padre : FORM - Elemento : INPUT</p><p>6 Etiqueta padre : FORM - Elemento : INPUT</p><p>7 Etiqueta padre : FORM - Elemento : INPUT</p><p>8 Etiqueta padre : FORM - Elemento : INPUT</p><p>9 Etiqueta padre : FORM - Elemento : INPUT</p><p>10 Etiqueta padre : FORM - Elemento : INPUT</p><p>11 Etiqueta padre : FORM - Elemento : INPUT</p><p>12 Etiqueta padre : FORM - Elemento : INPUT</p><p>13 Etiqueta padre : FORM - Elemento : INPUT</p><p>14 Etiqueta padre : BODY - Elemento : ARTICLE</p><p>15 Etiqueta padre : ARTICLE - Elemento : H2</p><p>16 Etiqueta padre : ARTICLE - Elemento : P</p><p>17 Etiqueta padre : ARTICLE - Elemento : SECTION</p><p>18 Etiqueta padre : SECTION - Elemento : H3</p><p>19 Etiqueta padre : SECTION - Elemento : P</p><p>20 Etiqueta padre : SECTION - Elemento : TABLE</p><p>21 Etiqueta padre : TABLE - Elemento : TBODY</p><p>22 Etiqueta padre : TBODY - Elemento : TR</p><p>23 Etiqueta padre : TR - Elemento : TH</p><p>24 Etiqueta padre : TR - Elemento : TH</p><p>25 Etiqueta padre : TR - Elemento : TH</p><p>26 Etiqueta padre : TR - Elemento : TH</p><p>27 Etiqueta padre : TR - Elemento : TH</p><p>28 Etiqueta padre : TR - Elemento : TH</p><p>29 Etiqueta padre : TR - Elemento : TH</p><p>30 Etiqueta padre : TR - Elemento : TH</p><p>31 Etiqueta padre : TBODY - Elemento : TR</p><p>32 Etiqueta padre : TR - Elemento : TH</p><p>33 Etiqueta padre : TR - Elemento : TD</p><p>34 Etiqueta padre : TR - Elemento : TD</p><p>35 Etiqueta padre : TR - Elemento : TD</p><p>36 Etiqueta padre : TR - Elemento : TD</p><p>37 Etiqueta padre : TR - Elemento : TD</p><p>38 Etiqueta padre : TR - Elemento : TD</p><p>39 Etiqueta padre : TR - Elemento : TD</p><p>40 Etiqueta padre : TBODY - Elemento : TR</p><p>41 Etiqueta padre : TR - Elemento : TH</p><p>42 Etiqueta padre : TR - Elemento : TD</p><p>43 Etiqueta padre : TR - Elemento : TD</p><p>44 Etiqueta padre : TR - Elemento : TD</p><p>45 Etiqueta padre : TR - Elemento : TD</p><p>46 Etiqueta padre : TR - Elemento : TD</p><p>47 Etiqueta padre : TR - Elemento : TD</p><p>48 Etiqueta padre : TR - Elemento : TD</p><p>49 Etiqueta padre : TBODY - Elemento : TR</p><p>50 Etiqueta padre : TR - Elemento : TH</p><p>51 Etiqueta padre : TR - Elemento : TD</p><p>52 Etiqueta padre : TR - Elemento : TD</p><p>53 Etiqueta padre : TR - Elemento : TD</p><p>54 Etiqueta padre : TR - Elemento : TD</p><p>55 Etiqueta padre : TR - Elemento : TD</p><p>56 Etiqueta padre : TR - Elemento : TD</p><p>57 Etiqueta padre : TR - Elemento : TD</p><p>58 Etiqueta padre : TBODY - Elemento : TR</p><p>59 Etiqueta padre : TR - Elemento : TH</p><p>60 Etiqueta padre : TR - Elemento : TD</p><p>61 Etiqueta padre : TR - Elemento : TD</p><p>62 Etiqueta padre : TR - Elemento : TD</p><p>63 Etiqueta padre : TR - Elemento : TD</p><p>64 Etiqueta padre : TR - Elemento : TD</p><p>65 Etiqueta padre : TR - Elemento : TD</p><p>66 Etiqueta padre : TR - Elemento : TD</p><p>67 Etiqueta padre : TBODY - Elemento : TR</p><p>68 Etiqueta padre : TR - Elemento : TH</p><p>69 Etiqueta padre : TR - Elemento : TD</p><p>70 Etiqueta padre : TR - Elemento : TD</p><p>71 Etiqueta padre : TR - Elemento : TD</p><p>72 Etiqueta padre : TR - Elemento : TD</p><p>73 Etiqueta padre : TR - Elemento : TD</p><p>74 Etiqueta padre : TR - Elemento : TD</p><p>75 Etiqueta padre : TR - Elemento : TD</p><p>76 Etiqueta padre : TBODY - Elemento : TR</p><p>77 Etiqueta padre : TR - Elemento : TH</p><p>78 Etiqueta padre : TR - Elemento : TD</p><p>79 Etiqueta padre : TR - Elemento : TD</p><p>80 Etiqueta padre : TR - Elemento : TD</p><p>81 Etiqueta padre : TR - Elemento : TD</p><p>82 Etiqueta padre : TR - Elemento : TD</p><p>83 Etiqueta padre : TR - Elemento : TD</p><p>84 Etiqueta padre : TR - Elemento : TD</p><p>85 Etiqueta padre : TBODY - Elemento : TR</p><p>86 Etiqueta padre : TR - Elemento : TH</p><p>87 Etiqueta padre : TR - Elemento : TD</p><p>88 Etiqueta padre : TR - Elemento : TD</p><p>89 Etiqueta padre : TR - Elemento : TD</p><p>90 Etiqueta padre : TR - Elemento : TD</p><p>91 Etiqueta padre : TR - Elemento : TD</p><p>92 Etiqueta padre : TR - Elemento : TD</p><p>93 Etiqueta padre : TR - Elemento : TD</p><p>94 Etiqueta padre : TBODY - Elemento : TR</p><p>95 Etiqueta padre : TR - Elemento : TH</p><p>96 Etiqueta padre : TR - Elemento : TD</p><p>97 Etiqueta padre : TR - Elemento : TD</p><p>98 Etiqueta padre : TR - Elemento : TD</p><p>99 Etiqueta padre : TR - Elemento : TD</p><p>100 Etiqueta padre : TR - Elemento : TD</p><p>101 Etiqueta padre : TR - Elemento : TD</p><p>102 Etiqueta padre : TR - Elemento : TD</p><p>103 Etiqueta padre : TBODY - Elemento : TR</p><p>104 Etiqueta padre : TR - Elemento : TH</p><p>105 Etiqueta padre : TR - Elemento : TD</p><p>106 Etiqueta padre : TR - Elemento : TD</p><p>107 Etiqueta padre : TR - Elemento : TD</p><p>108 Etiqueta padre : TR - Elemento : TD</p><p>109 Etiqueta padre : TR - Elemento : TD</p><p>110 Etiqueta padre : TR - Elemento : TD</p><p>111 Etiqueta padre : TR - Elemento : TD</p><p>112 Etiqueta padre : SECTION - Elemento : H3</p><p>113 Etiqueta padre : SECTION - Elemento : UL</p><p>114 Etiqueta padre : UL - Elemento : LI</p><p>115 Etiqueta padre : UL - Elemento : LI</p><p>116 Etiqueta padre : UL - Elemento : LI</p><p>117 Etiqueta padre : BODY - Elemento : FOOTER</p>
+
+            </section>
+        </article>
+
+        <footer> Alex Rodriguez Valdes - Software y Estándares para la Web 2022/2023 </footer>
+    
+</body></html>

@@ -1,0 +1,30 @@
+/*****************
+ Alex Rodriguez Valdes - UO282936
+ Hoja de estilos para el Ejercicio 11 - T3
+*****************/
+
+/* Especificidad (0,0,1) */
+body {
+    color: black;
+    background-color: #ffe7cb;
+}
+
+/* Especificidad (0,0,1) */
+header {
+    font-size: 1.1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Especificidad (0,0,1) */
+article {
+    margin-left: 2%;
+    font-family: 'Times New Roman', Times, serif
+}
+
+/* Especificidad (0,0,1) */
+footer {
+    padding-top: 0.5em;
+    margin-top: 2em;
+
+    border-top: 0.05em solid black;
+}
