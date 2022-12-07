@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Alex Rodriguez Valdes">
+        <meta name="description" content="Ejercicio 12 de la Práctica de Comp. en el cliente">
+        <meta name="keywords" content="JQuery, JavaScript, Ejercicio, Práctica">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Ejercicio 12 </title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="Ejercicio12.css">
+    </head>
+
+    <body>
+        <header>
+            <h1> Visor de archivos </h1>
+        </header><p> Este navegador soporta el API File </p>
+
+        <script src="Ejercicio12.js"></script>
+
+        <label for="archivo"> Archivo: </label>
+        <input id="archivo" type="file" onchange="visor.leerArchivoTexto(this.files)"><section> <h2> DATOS </h2><p> Nombre del archivo: Ejemplo.json </p><p> Tamaño del archivo: 836 bytes </p><p> Tipo del archivo: application/json </p><p> Fecha de última modificación: Wed Dec 07 2022 04:11:24 GMT+0100 (hora estándar de Europa central) </p><p> Contenido del archivo: </p><pre>{
+    "coord":{
+        "lon":-5.8448,
+        "lat":43.3603
+    },
+    "weather":[
+        {
+            "id":804,
+            "main":"Clouds",
+            "description":"nubes",
+            "icon":"04n"
+        }
+    ],
+    "base":"stations",
+    "main":{
+        "temp":10.36,
+        "feels_like":9.62,
+        "temp_min":9.6,
+        "temp_max":10.86,
+        "pressure":1018,
+        "humidity":83
+    },
+    "visibility":10000,
+    "wind":{
+        "speed":0.73,
+        "deg":165,
+        "gust":0.83
+    },
+    "clouds":{
+        "all":100
+    },
+    "dt":1669755234,
+    "sys":{
+        "type":2,
+        "id":2032169,
+        "country":"ES",
+        "sunrise":1669707227,
+        "sunset":1669740594
+    },
+    "timezone":3600,
+    "id":3114711,
+    "name":"Oviedo",
+    "cod":200
+}</pre></section>
+
+        <footer> Alex Rodriguez Valdes - Software y Estándares para la Web 2022/2023 </footer>
+    
+</body></html>

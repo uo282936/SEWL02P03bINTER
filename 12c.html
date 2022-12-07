@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Alex Rodriguez Valdes">
+        <meta name="description" content="Ejercicio 12 de la Práctica de Comp. en el cliente">
+        <meta name="keywords" content="JQuery, JavaScript, Ejercicio, Práctica">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Ejercicio 12 </title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="Ejercicio12.css">
+    </head>
+
+    <body>
+        <header>
+            <h1> Visor de archivos </h1>
+        </header><p> Este navegador soporta el API File </p>
+
+        <script src="Ejercicio12.js"></script>
+
+        <label for="archivo"> Archivo: </label>
+        <input id="archivo" type="file" onchange="visor.leerArchivoTexto(this.files)"><section> <h2> DATOS </h2><p> Nombre del archivo: Ejemplo.xml </p><p> Tamaño del archivo: 763 bytes </p><p> Tipo del archivo: text/xml </p><p> Fecha de última modificación: Wed Dec 07 2022 04:11:24 GMT+0100 (hora estándar de Europa central) </p><p> Contenido del archivo: </p><pre>&lt;current&gt;
+	&lt;city id="3114711" name="Oviedo"&gt;
+		&lt;coord lon="-5.8448" lat="43.3603"/&gt;
+		&lt;country&gt;ES&lt;/country&gt;
+		&lt;timezone&gt;3600&lt;/timezone&gt;
+		&lt;sun rise="2022-11-29T07:33:47" set="2022-11-29T16:49:54"/&gt;
+	&lt;/city&gt;
+	&lt;temperature value="10.36" min="9.6" max="10.86" unit="celsius"/&gt;
+	&lt;feels_like value="9.62" unit="celsius"/&gt;
+	&lt;humidity value="83" unit="%"/&gt;
+	&lt;pressure value="1018" unit="hPa"/&gt;
+	&lt;wind&gt;
+		&lt;speed value="0.73" unit="m/s" name="Calm"/&gt;
+		&lt;gusts value="0.83"/&gt;
+		&lt;direction value="165" code="SSE" name="South-southeast"/&gt;
+	&lt;/wind&gt;
+	&lt;clouds value="100" name="overcast clouds"/&gt;
+	&lt;visibility value="10000"/&gt;
+	&lt;precipitation mode="no"/&gt;
+	&lt;weather number="804" value="nubes" icon="04n"/&gt;
+	&lt;lastupdate value="2022-11-29T20:53:54"/&gt;
+&lt;/current&gt;</pre></section>
+
+        <footer> Alex Rodriguez Valdes - Software y Estándares para la Web 2022/2023 </footer>
+    
+</body></html>
