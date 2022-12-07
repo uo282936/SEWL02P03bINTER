@@ -1,0 +1,58 @@
+/*****************
+ Alex Rodriguez Valdes - UO282936
+ Hoja de estilos para el Ejercicio 12
+*****************/
+
+/* Especificidad (0,0,1) */
+body {
+    color: black;
+    background-color: #b3fcce;
+}
+
+/* Especificidad (0,0,1) */
+header {
+    padding-left: 0.5em;
+
+    font-size: 1.1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Especificidad (0,0,1) */
+label {
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+    margin-left: 2.5em;
+}
+
+/* Especificidad (0,0,1) */
+input {
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+    margin-left: 1.5em;
+}
+
+/* Especificidad (0,0,1) */
+section {
+    margin-left: 2em;
+}
+
+/* Especificidad (0,0,1) */
+footer {
+    padding-top: 0.5em;
+    margin-top: 2em;
+
+    border-top: 0.05em solid black;
+}
+
+/* Especificidad (0,0,1) */
+p, pre {
+    padding-left: 0.75em;
+}
+
+/* Especificidad (0,0,1) */
+pre {
+    width: 80%;
+
+    font-size: 1.2em;
+    font-family: 'Times New Roman', Times, serif;
+}
