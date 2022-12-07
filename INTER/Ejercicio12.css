@@ -48,3 +48,10 @@ footer {
 p, pre {
     padding-left: 0.75em;
 }
+
+/* Especificidad (0,0,1) */
+pre {
+    width: 80%;
+
+    font-size: 1.2em;
+}
